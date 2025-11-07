@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Comparator — OneKonnect vs Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Plan Comparator</h1>
+    <p>Compare OneKonnect and Puzzle plans across the four sections.</p>
+  </header>
+
+  <main class="container">
+    <section class="sides">
+      <div class="side" id="onekonnect-side">
+        <div class="side-header">
+          <h2>OneKonnect</h2>
+          <button class="btn" id="add-plan-onekonnect">Add Plan</button>
+        </div>
+        <div class="plans" id="plans-onekonnect"></div>
+      </div>
+
+      <div class="side" id="puzzle-side">
+        <div class="side-header">
+          <h2>Puzzle</h2>
+          <button class="btn" id="add-plan-puzzle">Add Plan</button>
+        </div>
+        <div class="plans" id="plans-puzzle"></div>
+      </div>
+    </section>
+
+    <section class="actions">
+      <div class="project-input">
+        <label for="project-name-input">Project Name</label>
+        <input type="text" id="project-name-input" placeholder="Project name (optional)">
+      </div>
+      <div class="action-buttons">
+        <button class="btn btn-primary" id="compare-btn">Compare</button>
+        <button class="btn" id="clear-all-btn" title="Clear all input">Clear All</button>
+        <button class="btn" id="download-btn" title="Download comparison as text">Download Results</button>
+      </div>
+    </section>
+
+    <section id="results" class="results" aria-live="polite"></section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Names are matched case-insensitively, trimmed, and cleaned of special characters. One name per line.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
